@@ -810,21 +810,6 @@ var __webpack_exports__ = {};
 !function() {
 "use strict";
 
-;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
 // EXTERNAL MODULE: ./node_modules/navigo/lib/navigo.min.js
 var navigo_min = __webpack_require__(123);
 ;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js
@@ -1108,10 +1093,6 @@ var renderBook = /*#__PURE__*/function () {
 ;// CONCATENATED MODULE: ./src/js/modules/router.js
 
 
-var _console$log;
-
-
-
 
 var library = document.querySelector('.library');
 
@@ -1134,53 +1115,55 @@ var closeAllPage = function closeAllPage() {
 };
 
 console.log('dist fix fields location.path');
-console.log((_console$log = {
+console.log({
   '/': function _() {
     closeAllPage();
     library.classList.remove('hidden');
     document.body.classList.remove('body_gradient');
     renderListBooks();
-  }
-}, _defineProperty(_console$log, "".concat(location.pathname, "book"), function book(_ref) {
-  var id = _ref.params.id;
-  closeAllPage();
-
-  _book.classList.remove('hidden');
-
-  document.body.classList.add('body_gradient');
-  renderBook(id);
-}), _defineProperty(_console$log, "".concat(location.pathname, "add"), function add() {
-  closeAllPage();
-
-  _add.classList.remove('hidden');
-
-  document.body.classList.add('body_gradient');
-}), _console$log));
-var initRouter = function initRouter() {
-  var _router$on;
-
-  router.on((_router$on = {
-    '/': function _() {
-      closeAllPage();
-      library.classList.remove('hidden');
-      document.body.classList.remove('body_gradient');
-      renderListBooks();
-    }
-  }, _defineProperty(_router$on, "".concat(location.pathname, "book"), function book(_ref2) {
-    var id = _ref2.params.id;
+  },
+  '/book': function book(_ref) {
+    var id = _ref.params.id;
     closeAllPage();
 
     _book.classList.remove('hidden');
 
     document.body.classList.add('body_gradient');
     renderBook(id);
-  }), _defineProperty(_router$on, "".concat(location.pathname, "add"), function add() {
+  },
+  '/add': function add() {
     closeAllPage();
 
     _add.classList.remove('hidden');
 
     document.body.classList.add('body_gradient');
-  }), _router$on)).resolve();
+  }
+});
+var initRouter = function initRouter() {
+  router.on({
+    '/': function _() {
+      closeAllPage();
+      library.classList.remove('hidden');
+      document.body.classList.remove('body_gradient');
+      renderListBooks();
+    },
+    '/book': function book(_ref2) {
+      var id = _ref2.params.id;
+      closeAllPage();
+
+      _book.classList.remove('hidden');
+
+      document.body.classList.add('body_gradient');
+      renderBook(id);
+    },
+    '/add': function add() {
+      closeAllPage();
+
+      _add.classList.remove('hidden');
+
+      document.body.classList.add('body_gradient');
+    }
+  }).resolve();
   addBtns.forEach(function (btn) {
     btn.addEventListener('click', function () {
       router.navigate('add');
