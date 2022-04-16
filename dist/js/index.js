@@ -919,7 +919,7 @@ var regenerator = __webpack_require__(757);
 ;// CONCATENATED MODULE: ./src/js/modules/serviceBook.js
 
 
-var API_URI = 'http://localhost:3024/';
+var API_URI = 'https://mysterious-earth-97472.herokuapp.com/';
 var getBooks = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/regenerator.mark(function _callee(id) {
     var response;
@@ -1102,7 +1102,7 @@ var _add = document.querySelector('.add');
 
 var addBtns = document.querySelectorAll('.header__btn-add, .library__add-btn');
 var backBtn = document.querySelector('.book__btn_back');
-var router = new navigo_min('/bigBrotherDist/dist/', {
+var router = new navigo_min(location.pathname, {
   hash: true
 });
 
