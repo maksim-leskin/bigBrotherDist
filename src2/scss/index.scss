@@ -1,0 +1,20 @@
+@import 'normalize';
+@include normalize();
+@import 'var';
+@import 'fonts';
+@import 'default';
+@import 'blocks/header';
+@import 'blocks/library';
+@import 'blocks/fields';
+@import 'blocks/cart';
+@import 'blocks/footer';
+
+@import 'blocks/book';
+
+@import "blocks/search";
+
+
+@import 'blocks/add';
+@import 'blocks/upload';
+@import 'blocks/status';
+@import 'blocks/star';

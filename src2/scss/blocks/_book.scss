@@ -1,0 +1,117 @@
+.book {
+  padding-bottom: 100px;
+  &__container {
+    @include laptop {
+      display: flex;
+      padding-left: 100px;
+    }
+    @include desktop {
+      display: flex;
+      padding-left: 135px;
+    }
+  }
+
+  &__header {
+    margin-bottom: 16px;
+    @include tablet {
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__wrapper {
+    flex-shrink: 0;
+    width: 168px;
+    margin: 0 auto 20px;
+    @include tablet {
+      width: 300px;
+      margin-bottom: 30px;
+    }
+    @include laptop {
+      width: 250px;
+      margin-bottom: 20px;
+      margin-right: 50px;
+    }
+  }
+
+  &__image {
+    border-radius: 6px;
+    object-fit: contain;
+    margin-bottom: 20px;
+  }
+
+  &__label {
+    display: block;
+    padding: 10px 30px;
+    width: 320px;
+    height: 50px;
+    font-size: 12px;
+    background: $light;
+    border-radius: 30px;
+    color: $dark;
+    @include tablet {
+      font-size: 14px;
+    }
+    @media (max-height: 500px) {
+      width: max-content;
+    }
+
+  }
+
+  &__label_desktop {
+    display: none;
+    @include laptop {
+      display: block;
+      width: 250px;
+    }
+  }
+
+
+  &__title {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 4px;
+    @include tablet {
+      font-size: 40px;
+      line-height: 49px;
+    }
+  }
+
+  &__author {
+    font-size: 14px;
+    line-height: 120%;
+    color: $secondary;
+    margin-bottom: 15px;
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+
+  &__rating {
+    margin-bottom: 15px;
+  }
+
+  &__rating-stars {
+    width: 36px;
+    height: 36px;
+  }
+
+  &__subtitle {
+    margin-bottom: 4px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 130%;
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+
+  &__description {
+    font-size: 12px;
+    line-height: 130%;
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+}

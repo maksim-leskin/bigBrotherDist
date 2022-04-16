@@ -1,0 +1,97 @@
+.add {
+  padding-bottom: 100px;
+
+  &__container {
+    max-width: 698px;
+    @media (max-width: 375px) {
+      padding: 0 12px;
+    }
+    @include tablet {
+      padding: 0;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 8px;
+    @media (max-width: 375px) {
+      padding-left: 8px;
+    }
+    @include laptop {
+      font-size: 40px;
+      line-height: 49px;
+    }
+  }
+
+  &__step {
+    font-size: 14px;
+    line-height: 100%;
+    color: $secondary;
+    margin-bottom: 30px;
+    @media (max-width: 375px) {
+      padding-left: 8px;
+    }
+    @include laptop {
+      font-size: 18px;
+    }
+  }
+
+  &__label {
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    padding-left: 8px;
+    margin-bottom: 7px;
+    @include tablet {
+      padding-left: 16px;
+    }
+
+  }
+
+  &__text {
+    width: 100%;
+    height: 70px;
+    display: block;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    padding: 8px;
+    font-size: 18px;
+  }
+
+  &__text_area {
+    min-height: 120px;
+    resize: none;
+  }
+
+  &__btn {
+    width: 320px;
+    height: 50px;
+    color: $light;
+    background-color: #F87C09;
+    border: 0;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+  }
+
+  &__footer {
+    display: flex;
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 12px;
+    margin-bottom: 20px;
+    @include laptop {
+      font-size: 14px;
+    }
+
+  }
+
+}

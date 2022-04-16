@@ -1,0 +1,69 @@
+.library {
+  &__header {
+    position: relative;
+    margin-bottom: 15px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 174px;
+      height: 174px;
+      left: -66px;
+      top: -63px;
+      background-color: #FF0000;
+      filter: blur(200px);
+      z-index: 1;
+      @include tablet {
+        content: none;
+      }
+    }
+  }
+
+  &__titles {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 8px;
+  }
+
+  &__count {
+    font-size: 14px;
+    line-height: 120%;
+    color: $secondary;
+    margin-bottom: 25px;
+  }
+
+  &__list-container {
+    @media (max-width: 375px) {
+      padding: 0 12px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 26px;
+    max-width: 780px;
+  }
+
+
+  &__add-btn {
+    background-color: transparent;
+    border: 0;
+    width: 44px;
+    height: 44px;
+    color: $primary;
+  }
+
+
+  &__footer {
+    @include laptop {
+      display: none;
+    }
+  }
+}

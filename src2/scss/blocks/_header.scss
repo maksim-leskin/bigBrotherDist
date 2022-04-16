@@ -1,0 +1,67 @@
+.header {
+  padding: 8px 0;
+  @include tablet {
+    padding: 20px 0 15px;
+  }
+
+  @include desktop {
+    padding: 30px 0 25px;
+  }
+
+  &__logo {
+    height: 40px;
+    @include laptop {
+      height: 66px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__btn {
+    width: 40px;
+    height: 40px;
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    background-position: right;
+
+    &_search {
+      background-image: url(../img/search.svg);
+    }
+
+    &_back {
+      background-image: url(../img/back.svg);
+      background-position: center left;
+    }
+
+    &_delete {
+      background-image: url(../img/delete.svg);
+    }
+  }
+
+  &__right {
+    @include laptop {
+      display: flex;
+      align-items: center;
+    }
+
+  }
+
+  &__btn-add {
+    display: none;
+    @include laptop {
+      font-size: 14px;
+      display: block;
+      width: 320px;
+      height: 50px;
+      background-color: $primary;
+      border-radius: 8px;
+      margin-right: 118px;
+    }
+  }
+}

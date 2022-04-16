@@ -1,0 +1,57 @@
+.library {
+  height: auto;
+  padding-bottom: 100px;
+
+  &__titles {
+    margin-bottom: 20px;
+  }
+
+  &__header {
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 8px;
+    @include laptop {
+      font-size: 40px;
+      line-height: 49px;
+    }
+  }
+
+  &__count {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    margin-bottom: 25px;
+    @include laptop {
+      font-size: 18px;
+      line-height: 120%;
+    }
+  }
+
+
+  &__list-container {
+
+    @media (max-width: 375px) {
+      padding: 0 12px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 26px;
+    max-width: 780px;
+  }
+
+  &__add-btn {
+    background-color: transparent;
+    border: 0;
+    width: 44px;
+    height: 44px;
+    color: $primary;
+  }
+}

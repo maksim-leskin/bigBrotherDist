@@ -1,0 +1,44 @@
+.search {
+  $height: 40px;
+  $top: 8px;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: -$top - $height;
+  transition: transform .3s ease-in-out;
+  &_active {
+    transform: translateY($top * 2 + $height);
+  }
+
+
+  &__form {
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    height: $height;
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 3px 40px 3px 15px;
+    outline: 1px solid transparent;
+    outline-offset: -1px;
+    border: 0;
+    &:focus {
+      outline-color: $secondaryDark;;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $dark;
+    background-color: transparent;
+    border: 0;
+    width: 24px;
+    height: 24px;
+  }
+
+}

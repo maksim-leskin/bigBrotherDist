@@ -1,0 +1,41 @@
+.status {
+  margin-bottom: 40px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  &__radio {
+    position: absolute;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  &__label {
+    display: inline-block;
+    padding: 8px;
+    background-color: $light;
+    color: $dark;
+    border-radius: 16px;
+    outline: 1px solid transparent;
+    transition: background-color .5s ease-in-out, outline-color .1s ease-in-out;
+    &:hover {
+      background-color: $secondary;
+    }
+  }
+
+  &__radio:focus + &__label {
+    outline-color: $secondaryDark
+  }
+
+  &__radio:active + &__label {
+    outline-color: $primary
+  }
+
+  &__radio:checked + &__label {
+    outline-color: $primary;
+    background-color: $primary
+  }
+}

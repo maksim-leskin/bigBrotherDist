@@ -1,0 +1,29 @@
+.upload {
+  max-width: 222px;
+  margin: 0 auto 15px;
+
+  &__preview {
+    display: none;
+  }
+
+  &__file {
+    display: none;
+  }
+
+  &__label {
+    display: block;
+    width: 222px;
+    height: 290px;
+    background-image: url("../img/upload.jpg");
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 6px;
+
+    &_active {
+      background-image: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
