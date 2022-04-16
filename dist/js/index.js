@@ -1102,7 +1102,7 @@ var _add = document.querySelector('.add');
 
 var addBtns = document.querySelectorAll('.header__btn-add, .library__add-btn');
 var backBtn = document.querySelector('.book__btn_back');
-var router = new navigo_min('/', {
+var router = new navigo_min('/bigBrotherDist/dist/', {
   hash: true
 });
 
