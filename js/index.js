@@ -1115,30 +1115,6 @@ var closeAllPage = function closeAllPage() {
 };
 
 console.log('dist fix fields location.path');
-console.log({
-  '/': function _() {
-    closeAllPage();
-    library.classList.remove('hidden');
-    document.body.classList.remove('body_gradient');
-    renderListBooks();
-  },
-  '/book': function book(_ref) {
-    var id = _ref.params.id;
-    closeAllPage();
-
-    _book.classList.remove('hidden');
-
-    document.body.classList.add('body_gradient');
-    renderBook(id);
-  },
-  '/add': function add() {
-    closeAllPage();
-
-    _add.classList.remove('hidden');
-
-    document.body.classList.add('body_gradient');
-  }
-});
 var initRouter = function initRouter() {
   router.on({
     '/': function _() {
@@ -1147,14 +1123,14 @@ var initRouter = function initRouter() {
       document.body.classList.remove('body_gradient');
       renderListBooks();
     },
-    '/book': function book(_ref2) {
-      var id = _ref2.params.id;
+    '/book': function book(obj) {
+      console.log(obj);
       closeAllPage();
 
       _book.classList.remove('hidden');
 
       document.body.classList.add('body_gradient');
-      renderBook(id);
+      renderBook(obj.params.id);
     },
     '/add': function add() {
       closeAllPage();
