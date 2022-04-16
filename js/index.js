@@ -1130,6 +1130,7 @@ var closeAllPage = function closeAllPage() {
   _add.classList.add('hidden');
 };
 
+console.log('dist fix fields location.path');
 var initRouter = function initRouter() {
   var _router$on;
 
